@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: var(--font-inter);
+  --font-dmsans: var(--font-dmsans);
+  --font-poppins_700: var(--font-poppins_700);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  @apply font-dmsans bg-gray-100 text-gray-950;
+}
+main {
+  h1 {
+    @apply text-[4rem] font-bold;
+  }
+}
