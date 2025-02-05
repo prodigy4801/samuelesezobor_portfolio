@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { inter, dm_sans, poppins_700 } from '@/styles/fonts';
-//import { Inter, Poppins, DM_Sans } from 'next/font/google';
-//import { inter } from '@/fonts';
-// import { Geist, Geist_Mono } from 'next/font/google';
+import TopHeader from '@/components/header';
 import './globals.scss';
 
 export const metadata: Metadata = {
@@ -20,6 +18,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${dm_sans.variable} ${poppins_700.variable} antialiased`}>
         <div className='splashright'></div>
         <div className='splashleft'></div>
+        <TopHeader />
         {children}
       </body>
     </html>
