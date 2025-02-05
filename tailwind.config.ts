@@ -13,10 +13,6 @@ export default {
         dmsans: ['var(--font-dmsans)'],
         poppins700: ['var(--font-poppins_700)'],
       },
-      colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
-      },
     },
   },
   plugins: [],

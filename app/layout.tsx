@@ -17,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.variable} ${dm_sans.variable} ${poppins_700.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${dm_sans.variable} ${poppins_700.variable} antialiased`}>
+        <div className='splashright'></div>
+        <div className='splashleft'></div>
+        {children}
+      </body>
     </html>
   );
 }
