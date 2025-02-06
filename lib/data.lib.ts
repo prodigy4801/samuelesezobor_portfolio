@@ -6,7 +6,7 @@ import type { TNavigationLinkModel, TExperienceModel, TProjectModel } from '@/mo
 import betaslides_img from '@/public/betaslides.png';
 import bdsa_img from '@/public/betaslides_bdsa.png';
 import onesource from '@/public/onesource.png';
-import gs1_service_apis from '@/public/service_api_gs1_nig.png';
+//import gs1_service_apis from '@/public/service_api_gs1_nig.png';
 import sytizen_ui from '@/public/sytizen_UI_design.png';
 
 export const NavigationLinks: TNavigationLinkModel[] = [
@@ -108,26 +108,28 @@ export const skillsData: string[] = [
   'HTML',
   'CSS',
   'SCSS',
+  'Tailwind',
   'JavaScript',
   'TypeScript',
-  'C#',
   'React',
   'Next.js',
+  'Framer Motion',
+  'Redux',
+  'Vue JS',
+  'Quasar',
+  'C#',
+  'Hang Fire',
+  'Rabbit MQ',
+  'Python',
+  'Django',
   'ASP.NET',
   'Node.js',
   'Express',
-  'Git',
-  'Tailwind',
   'Prisma',
+  'Git',
   'SQL',
   'Oracle',
   'MongoDB',
-  'Redux',
   'GraphQL',
   'PostgreSQL',
-  'Python',
-  'Django',
-  'Framer Motion',
-  'Hang Fire',
-  'Rabbit MQ',
 ] as const;

@@ -7,10 +7,12 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import myPicture from '@/public/myPics.jpg';
+import { useSectionInView } from '@/lib/hooks';
 
 export default function IntroSection() {
+  const { ref } = useSectionInView('Home', 0.5);
   return (
-    <section className='intro-wrapper' id='home'>
+    <section ref={ref} className='intro-wrapper' id='home'>
       <div className='intro-wrapper-container'>
         <div className=' intro-wrapper-container-content'>
           <motion.div

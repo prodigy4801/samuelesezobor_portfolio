@@ -1,3 +1,3 @@
-import { NavigationLinks as links } from './data.lib';
+import { NavigationLinks } from './data.lib';
 
-export type TSectionName = (typeof links)[number]['name'];
+export type TSectionName = (typeof NavigationLinks)[number]['name'];

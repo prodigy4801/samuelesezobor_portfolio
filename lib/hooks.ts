@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import { useActiveSectionContext } from '@/context/active-context-section';
-import { useInView } from 'react-intersection-observer';
+import { useEffect, useContext } from 'react';
+import { ActiveSectionContext } from '@/context/active-context-section';
 import { TSectionName } from './types.lib';
+import { useInView } from 'react-intersection-observer';
 
 export function useSectionInView(sectionName: TSectionName, threshold = 0.75) {
   const { ref, inView } = useInView({ threshold });
@@ -16,4 +16,13 @@ export function useSectionInView(sectionName: TSectionName, threshold = 0.75) {
   return {
     ref,
   };
+}
+
+export function useActiveSectionContext() {
+  const context = useContext(ActiveSectionContext);
+
+  if (context == null) {
+    throw new Error('useActiveSectionContext must be used within an ActiveSectionContextProvider');
+  }
+  return context;
 }

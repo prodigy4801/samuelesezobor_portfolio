@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { inter, dm_sans, poppins_700 } from '@/styles/fonts';
 import TopHeader from '@/components/header';
 import './globals.scss';
+import ActiveSectionContextProvider from '@/context/active-context-section';
 
 export const metadata: Metadata = {
   title: 'Esezobor | Portfolio',
@@ -18,8 +19,10 @@ export default function RootLayout({
       <body className={`${inter.variable} ${dm_sans.variable} ${poppins_700.variable} antialiased`}>
         <div className='splashright'></div>
         <div className='splashleft'></div>
-        <TopHeader />
-        {children}
+        <ActiveSectionContextProvider>
+          <TopHeader />
+          {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

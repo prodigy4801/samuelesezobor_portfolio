@@ -2,12 +2,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from './section-heading';
+import { useSectionInView } from '@/lib/hooks';
 
 export default function About() {
+  const { ref } = useSectionInView('About');
   return (
     <motion.section
       className='about-wrapper'
       id='about'
+      ref={ref}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 2, duration: 3 }}

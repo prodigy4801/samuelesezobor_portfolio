@@ -1,14 +1,13 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { NavigationLinks as links } from '@/lib/data.lib';
 import clsx from 'clsx';
-//import { useActiveSectionContext } from '@/context/active-context-section';
+import { useActiveSectionContext } from '@/lib/hooks';
 
 export default function TopHeader() {
-  const [activeSection, setActiveSection] = useState('Home');
-  //const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <header className='header-wrapper'>
       <motion.div
@@ -27,19 +26,15 @@ export default function TopHeader() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.1, duration: 1 }}
             >
-              {/* <Link
-                href={link.hash}
-                className={clsx('nav-container-content--link', {
-                  'nav-container-content--link-active': activeSection === link.name,
-                })}
-              >
-                {link.name}
-              </Link> */}
               <Link
                 href={link.hash}
                 className={clsx('nav-container-content--link', {
                   'nav-container-content--link-active': activeSection === link.name,
                 })}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
               >
                 {link.name}
                 {link.name === activeSection && (
