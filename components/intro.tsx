@@ -10,12 +10,13 @@ import myPicture from '@/public/myPics.jpg';
 
 export default function IntroSection() {
   return (
-    <section className='intro-wrapper'>
+    <section className='intro-wrapper' id='home'>
       <div className='intro-wrapper-container'>
         <div className=' intro-wrapper-container-content'>
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: [null, 1.2], transition: { duration: 2, delay: 0.3 } }}
             transition={{
               type: 'tween',
               duration: 0.7,
@@ -73,15 +74,15 @@ export default function IntroSection() {
         <Link href='#contact' className='contact-page group'>
           Contact me here <BsArrowRight className='contact-page-icon' />
         </Link>
-        <a className='contact-download group' href='/CV.pdf' download>
+        <a className='contact-download group' href='/Samuel Resume.pdf' download>
           Download CV <HiDownload className='contact-download-icon' />
         </a>
 
-        <a className='contact-linkedln' href='https://linkedin.com' target='_blank'>
+        <a className='contact-linkedln' href='https://www.linkedin.com/in/samuel-esezobor-6a0651240/' target='_blank'>
           <BsLinkedin />
         </a>
 
-        <a className='contact-github' href='https://github.com' target='_blank'>
+        <a className='contact-github' href='https://github.com/prodigy4801' target='_blank'>
           <FaGithubSquare />
         </a>
       </motion.div>

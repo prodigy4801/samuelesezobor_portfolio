@@ -17,5 +17,5 @@ export type TProjectModel = {
   title: string;
   description: string;
   tags: string[];
-  imageUrl?: StaticImageData[];
+  imageUrl: StaticImageData;
 };

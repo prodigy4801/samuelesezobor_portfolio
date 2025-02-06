@@ -80,28 +80,28 @@ export const ProjectProfiles: TProjectModel[] = [
     description:
       'I worked as a full-stack developer for 6 years, creating in-house ERP system and also eternal API services.',
     tags: ['ASP.NET', 'Vue JS', 'SQL Database', 'Hangfire Background Service'],
-    imageUrl: [onesource, gs1_service_apis],
+    imageUrl: onesource,
   },
   {
     title: 'Betaslides',
     description:
       'Betaslide is a website that is built for professional designer to outsource there Design work whether it be a Presentation, Digital Poster, Logo or Product Mock ups. As a Software developer I was responsible for UI Implementation.',
     tags: ['ASP.NET (Core 6)', 'Razor Page', 'Bootstrap 5'],
-    imageUrl: [betaslides_img],
+    imageUrl: betaslides_img,
   },
   {
     title: 'BDSA',
     description:
       'Betaslide Design Support Africa is a platform that provides essential funding, top-tier education and supportive community for both aspiring and professional designers',
     tags: ['React JS', 'Next JS', 'Framer Motion'],
-    imageUrl: [bdsa_img],
+    imageUrl: bdsa_img,
   },
   {
     title: 'Panera',
     description:
       'Devised an innovative design system for Sycamore leveraging Vue JS and Tailwind CSS, resulting in a 20% reduction in design discrepancies and improving overall project delivery timelines by 15%.',
     tags: ['Vue JS', 'Typescript', 'Javascript ', 'Tailwind CSS', 'SCSS'],
-    imageUrl: [sytizen_ui],
+    imageUrl: sytizen_ui,
   },
 ] as const;
 export const skillsData: string[] = [

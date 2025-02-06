@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' className='!scroll-smooth'>
       <body className={`${inter.variable} ${dm_sans.variable} ${poppins_700.variable} antialiased`}>
         <div className='splashright'></div>
         <div className='splashleft'></div>
