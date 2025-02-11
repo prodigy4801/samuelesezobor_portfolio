@@ -1,4 +1,6 @@
 import About from '@/components/about';
+import Contact from '@/components/contact';
+import Experience from '@/components/experience';
 import IntroSection from '@/components/intro';
 import Projects from '@/components/projects';
 import SectionDivider from '@/components/section-divider';
@@ -12,12 +14,8 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+      <Experience />
+      <Contact />
     </main>
-    // <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]'>
-    //   <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
-    //     <h1>Personal Portfolio Application</h1>
-    //   </main>
-    //   <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'></footer>
-    // </div>
   );
 }

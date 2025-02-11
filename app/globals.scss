@@ -52,9 +52,9 @@ main {
         &--link {
           @apply flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300;
           &-active {
-            @apply text-gray-800 dark:text-gray-200;
+            @apply text-gray-800 dark:text-gray-200 dark:hover:text-gray-300;
             .nav-activelink {
-              @apply bg-gray-300 rounded-full absolute inset-0 -z-10 dark:bg-gray-800;
+              @apply bg-gray-300 rounded-full absolute inset-0 -z-10 dark:bg-gray-700 dark:hover:bg-gray-500;
             }
           }
         }
@@ -129,11 +129,18 @@ main {
   }
 }
 .skills-wrapper {
-  @apply mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40;
+  @apply mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-32;
   &-ul {
     @apply flex flex-wrap justify-center gap-2;
     .skill-item {
       @apply font-inter text-base text-gray-800 bg-white border border-black/10 rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80;
     }
+  }
+}
+.experience-wrapper {
+  @apply scroll-mt-28 mb-28 sm:mb-40;
+  .vertical-timeline::before {
+    @apply bg-gray-400 dark:bg-white/[8%];
+    // background: #eee4d7 !important;;
   }
 }

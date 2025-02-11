@@ -3,6 +3,10 @@ import { inter, dm_sans, poppins_700 } from '@/styles/fonts';
 import TopHeader from '@/components/header';
 import './globals.scss';
 import ActiveSectionContextProvider from '@/context/active-context-section';
+import { Toaster } from 'react-hot-toast';
+import Footer from '@/components/footer';
+import ThemeSwitch from '@/components/theme-switch';
+import ThemeContextProvider from '@/context/theme-context';
 
 export const metadata: Metadata = {
   title: 'Esezobor | Portfolio',
@@ -16,13 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='!scroll-smooth'>
-      <body className={`${inter.variable} ${dm_sans.variable} ${poppins_700.variable} antialiased`}>
+      <body className={`${inter.variable} ${dm_sans.variable} ${poppins_700.variable}`}>
         <div className='splashright'></div>
         <div className='splashleft'></div>
-        <ActiveSectionContextProvider>
-          <TopHeader />
-          {children}
-        </ActiveSectionContextProvider>
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <TopHeader />
+            {children}
+            <Toaster position='top-right' />
+            <Footer></Footer>
+            <ThemeSwitch />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ import type { TNavigationLinkModel, TExperienceModel, TProjectModel } from '@/mo
 import betaslides_img from '@/public/betaslides.png';
 import bdsa_img from '@/public/betaslides_bdsa.png';
 import onesource from '@/public/onesource.png';
-//import gs1_service_apis from '@/public/service_api_gs1_nig.png';
+import gs1_service_apis from '@/public/service_api_gs1_nig.png';
 import sytizen_ui from '@/public/sytizen_UI_design.png';
 
 export const NavigationLinks: TNavigationLinkModel[] = [
@@ -46,7 +46,7 @@ export const experiencesData: TExperienceModel[] = [
     date: 'June 2023 - till date',
   },
   {
-    title: 'Front-End Developer',
+    title: 'Backend Developer',
     location: 'Panera Nigeria - Freelancing',
     description:
       'Worked as a Front-end developer working as a freelancer. My task was to build a design system that contains all the needed UI components. Mainly used Vue JS with Nuxt.',
@@ -76,10 +76,17 @@ export const experiencesData: TExperienceModel[] = [
 
 export const ProjectProfiles: TProjectModel[] = [
   {
-    title: 'GS1 Nigeria',
+    title: 'GS1 Nigeria Onesource Services',
     description:
-      'I worked as a full-stack developer for 6 years, creating in-house ERP system and also eternal API services.',
-    tags: ['ASP.NET', 'Vue JS', 'SQL Database', 'Hangfire Background Service'],
+      'An API service that serves every request from different system including the ERP systems and external request.',
+    tags: ['ASP.NET', 'SQL Database', 'Hangfire Background Service'],
+    imageUrl: gs1_service_apis,
+  },
+  {
+    title: 'Onesource Admin Portal',
+    description:
+      'An ERP Application that manages, coortdianate and maintains the activities of all the Members of GS1 Nigeria. ',
+    tags: ['Vue JS', 'Composition API', 'Pinia', 'Axios'],
     imageUrl: onesource,
   },
   {
@@ -93,14 +100,14 @@ export const ProjectProfiles: TProjectModel[] = [
     title: 'BDSA',
     description:
       'Betaslide Design Support Africa is a platform that provides essential funding, top-tier education and supportive community for both aspiring and professional designers',
-    tags: ['React JS', 'Next JS', 'Framer Motion'],
+    tags: ['React JS', 'Next JS', 'Framer Motion', 'Typescript', 'Tailwind CSS', 'SCSS', 'Embla Carousel'],
     imageUrl: bdsa_img,
   },
   {
     title: 'Panera',
     description:
       'Devised an innovative design system for Sycamore leveraging Vue JS and Tailwind CSS, resulting in a 20% reduction in design discrepancies and improving overall project delivery timelines by 15%.',
-    tags: ['Vue JS', 'Typescript', 'Javascript ', 'Tailwind CSS', 'SCSS'],
+    tags: ['Vue JS', 'NUXT JS', 'Typescript', 'Tailwind CSS', 'SCSS'],
     imageUrl: sytizen_ui,
   },
 ] as const;

@@ -18,15 +18,16 @@ export default function About() {
       <SectionHeading>About Me</SectionHeading>
       <p className='mb-3'>
         After graduating with a bachelor degree in <span className='font-medium'>Computer Science</span>, I decided to
-        pursue my passion for programming. I worked under a old friend of mine who was an Application Developer
-        Consultant for Access Bank for 1 year before i got my first Software developer job at SEIS 1811 Ikeja where I
-        developed a <span className='font-medium'> desktop application </span>ERP system using{' '}
+        pursue my passion in programming. I worked under a friend of mine who was an Application Developer Consultant
+        for Access Bank for 1 year before i got my first software developer job at SEIS 1811 Ikeja where I developed a{' '}
+        <span className='font-medium'> desktop application </span>system using{' '}
         <span className='font-medium'>Visual Basic .NET </span>.{' '}
-        <span className='italic'>My favorite part of programming</span> is the problem-solving aspect. My core stack are{' '}
+        <span className='italic'>My favorite part of programming</span> is the problem-solving aspect. My core
+        programming stack are{' '}
         <span className='font-medium'>
-          ASP.NET, React JS, Vue JS, Python, SQL, Javascript, CSS, HTML and Visual Basic.NET
+          ASP.NET, React JS, Vue JS, SQL, Javascript, Tailwind, TypeScript and Visual Basic.NET
         </span>
-        . I am also familiar with Tailwind, TypeScript and Prisma. I am always looking to learn new technologies. I am
+        . I am also familiar with Python, Java and Node JS Prisma. I am always looking to learn new technologies. I am
         currently looking for a <span className='font-medium'>full-stack position</span> as a software developer.
       </p>
       <p>

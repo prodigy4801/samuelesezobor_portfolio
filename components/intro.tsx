@@ -7,10 +7,12 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import myPicture from '@/public/myPics.jpg';
+import { useActiveSectionContext } from '@/lib/hooks';
 import { useSectionInView } from '@/lib/hooks';
 
 export default function IntroSection() {
   const { ref } = useSectionInView('Home', 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <section ref={ref} className='intro-wrapper' id='home'>
       <div className='intro-wrapper-container'>
@@ -73,7 +75,14 @@ export default function IntroSection() {
           delay: 0.1,
         }}
       >
-        <Link href='#contact' className='contact-page group'>
+        <Link
+          href='#contact'
+          className='contact-page group'
+          onClick={() => {
+            setActiveSection('Contact');
+            setTimeOfLastClick(Date.now);
+          }}
+        >
           Contact me here <BsArrowRight className='contact-page-icon' />
         </Link>
         <a className='contact-download group' href='/Samuel Resume.pdf' download>

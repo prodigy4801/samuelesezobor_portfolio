@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image';
+import React from 'react';
 
 export type TNavigationLinkModel = {
   name: string;
@@ -10,7 +11,7 @@ export type TExperienceModel = {
   location: string;
   description: string;
   tools: string[];
-  icon: unknown;
+  icon: React.ReactNode;
   date: string;
 };
 export type TProjectModel = {
@@ -19,3 +20,4 @@ export type TProjectModel = {
   tags: string[];
   imageUrl: StaticImageData;
 };
+export type TTheme = 'light' | 'dark';
